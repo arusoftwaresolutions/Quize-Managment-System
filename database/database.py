@@ -21,13 +21,16 @@ def initialize_database():
     """)
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS quizzes(
+        CREATE TABLE IF NOT EXISTS questions(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
-            description TEXT,
-            created_by INTEGER,
-            FOREIGN KEY(created_by) REFERENCES users(id)
-        )
+            quiz_id INTEGER,
+            question TEXT NOT NULL,
+            option_a TEXT,
+            option_b TEXT,
+            option_c TEXT,
+            option_d TEXT,
+            correct_answer TEXT,
+            FOREIGN KEY(quiz_id) REFERENCES quizzes(id) )
     """)
 
     cursor.execute("""
