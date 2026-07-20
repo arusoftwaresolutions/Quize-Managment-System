@@ -48,7 +48,7 @@ class AuthService:
     @staticmethod
     def login(username, password):
 
-        connection = get_connection()
+        connection = create_connection()
         cursor = connection.cursor()
 
         cursor.execute(
