@@ -1,6 +1,6 @@
 from database.database import create_connection
-from utils.security import hash_password, verify_password
-from utils.validator import validate_username, validate_password
+from tools.security import hash_password, verify_password
+from tools.validator import validate_username, validate_password
 
 
 class AuthService:
