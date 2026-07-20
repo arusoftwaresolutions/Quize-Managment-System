@@ -1,5 +1,5 @@
 from database.database import initialize_database
-from authentication.auth import AuthService
+from services.auth import AuthService
 
 
 def option():
