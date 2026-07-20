@@ -16,7 +16,7 @@ class AuthService:
             print("Password must be at least 6 characters.")
             return False
 
-        connection = get_connection()
+        connection = create_connection()
         cursor = connection.cursor()
 
         cursor.execute(
